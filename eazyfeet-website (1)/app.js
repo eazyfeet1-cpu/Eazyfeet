@@ -34,7 +34,7 @@ function waLink(text) {
 
 function setCommonLinks() {
   document.querySelectorAll('[data-wa]').forEach(function (a) {
-    a.href = waLink(a.getAttribute('data-wa') || 'Hi EazyFeet, mujhe order karna hai.');
+    a.href = waLink(a.getAttribute('data-wa') || 'Hi EazyFeet, I\'d like to place an order.');
     a.target = '_blank'; a.rel = 'noopener';
   });
   var map = { meesho: MEESHO_LINK, snapdeal: SNAPDEAL_LINK, indiamart: INDIAMART_LINK };
@@ -114,7 +114,7 @@ function renderProduct() {
   function order() {
     if (!state.size) { var m = document.getElementById('sizemsg'); m.hidden = false; return; }
     var c = palette[state.ci];
-    var text = 'Hi EazyFeet, mujhe ye order karna hai:\n' + p.name + '\nColour: ' + c.name + '\nSize (UK): ' + state.size + '\nPrice: ₹' + p.price + '\n\nNaam:\nAddress:\nPincode:';
+    var text = 'Hi EazyFeet, I would like to order:\n' + p.name + '\nColour: ' + c.name + '\nSize (UK): ' + state.size + '\nPrice: ₹' + p.price + '\n\nName:\nAddress:\nPincode:';
     window.open(waLink(text), '_blank', 'noopener');
   }
   document.getElementById('buy').addEventListener('click', order);
@@ -125,7 +125,7 @@ function renderProduct() {
     var v = document.getElementById('pin').value.replace(/\D/g, '');
     var out = document.getElementById('pinmsg');
     if (v.length === 6) { out.textContent = 'Delivery in 3–5 days · COD available'; out.style.color = '#1F6B47'; }
-    else { out.textContent = 'Sahi 6-digit pincode daalein'; out.style.color = '#B42318'; }
+    else { out.textContent = 'Please enter a valid 6-digit pincode'; out.style.color = '#B42318'; }
   });
   paint();
 }
