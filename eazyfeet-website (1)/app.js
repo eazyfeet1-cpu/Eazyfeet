@@ -1,5 +1,5 @@
 /* ====== SETTINGS: yahan apni details badlein ====== */
-var WHATSAPP_NUMBER = '91XXXXXXXXXX';   // apna WhatsApp number, country code 91 ke saath, bina + ke
+var WHATSAPP_NUMBER = '917379503409';   // apna WhatsApp number, country code 91 ke saath, bina + ke
 var MEESHO_LINK = '#';                  // apne Meesho store ka link
 var SNAPDEAL_LINK = '#';                // apne Snapdeal store ka link
 var INDIAMART_LINK = '#';               // apne IndiaMART page ka link
